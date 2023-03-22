@@ -25,7 +25,7 @@ if (mapBox) {
 }
 
 // SIGNUP NEWUSER USING AXION(API) //////////////////////////////////////////////////////////////////////
-/*
+
 if (signupForm) {
   signupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -44,7 +44,7 @@ if (signupForm) {
     signupForm.reset();
   });
 }
-*/
+
 // LOGIN USING AXION(API) //////////////////////////////////////////////////////////////////////////////////////
 if (loginForm) {
   loginForm.addEventListener('submit', async (e) => {

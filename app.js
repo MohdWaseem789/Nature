@@ -8,6 +8,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 const AppError = require('./utill/ErrorHandling');
 const globalErrorHandle = require('./controller/errorController');
 const tourRoute = require('./routes/tourRoute');
@@ -60,7 +61,7 @@ app.use(
 );
 
 // development loging
-console.log(process.env.NODE_ENV);
+//console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
@@ -97,6 +98,8 @@ app.use(
     ],
   })
 );
+
+app.use(compression());
 
 // Test middleware
 app.use((req, res, next) => {

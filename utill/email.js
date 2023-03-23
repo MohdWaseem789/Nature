@@ -19,8 +19,8 @@ module.exports = class Email {
         secure: false,
         requireTLS: true,
         auth: {
-          user: process.env.SENDGRID_USERNAME,
-          pass: process.env.SENDGRID_PASSWORD,
+          user: process.env.GMAIL_USERNAME,
+          pass: process.env.GMAIL_PASSWORD,
         },
       });
     }
